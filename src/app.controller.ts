@@ -14,4 +14,9 @@ export class AppController {
   webhook(@Body() body) {
     return this.appService.webhook(body);
   }
+
+  @Post('/send-message')
+  sendMessage(@Body() body) {
+    return this.appService.sendMessage(body);
+  }
 }
